@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <ul id="people-list">
-        <li class="person">Анасуримбор Келлхус</li>
-        <li class="person">Анасуримбор Моэнгхус</li>
-        <li class="person">Друз Ахкеймион</li>
-        <li class="person">Найюр урс Скиоата</li>
-        <li class="person">Серве хил Кейалти</li>
-        <li class="person">Икурей Ксерий</li>
-        <li class="person">Ауранг</li>
-        <li class="person">Ауракс</li>
+      <li class="person">Анасуримбор Келлхус</li>
+      <li class="person">Анасуримбор Моэнгхус</li>
+      <li class="person">Друз Ахкеймион</li>
+      <li class="person">Найюр урс Скиоата</li>
+      <li class="person">Серве хил Кейалти</li>
+      <li class="person">Икурей Ксерий</li>
+      <li class="person">Ауранг</li>
+      <li class="person">Ауракс</li>
     </ul>
     <!--   1. Уберите у списка маркеры.
        2. Сделайте шрифт в элементах списка жирным.
        3. Сделайте каждый второй элемент списка - на сером фоне.   -->
     <script>
-
+      const peopleList = document.querySelector("#people-list")
+      peopleList.style.listStyle = "none"
+      const peopleItems = document.querySelectorAll("#people-list .person")
+      peopleItems.forEach((elem) => (elem.style.fontWeight = "bold"))
+      const peopleSecondItems = document.querySelectorAll(
+        "#people-list .person:nth-child(2n)"
+      )
+      peopleSecondItems.forEach(
+        (elem) => (elem.style.backgroundColor = "tomato")
+      )
     </script>
-
-</body>
-
+  </body>
 </html>
